@@ -1,0 +1,247 @@
+/* General styles */
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Site header */
+.site-header {
+  background: linear-gradient(to right, #ff6b81, #ffb142);
+  padding: 15px 0;
+}
+
+.site-header a {
+  color: #ffffff;
+  transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navigation links animation */
+nav a {
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  transform: translateY(-3px);
+}
+main{
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+/* Cards */
+/* Card animation */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-25px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings animation */
+h1, h2, h3 {
+  transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: #ff5252; /* Change color on hover */
+}
+
+/* Featurette images animation */
+.featurette-image {
+  transition: transform 0.3s ease;
+}
+
+.featurette-image:hover {
+  transform: scale(1.1) rotate(5deg); /* Scale and rotate image on hover */
+}
+
+/* Dummy devices animation */
+.product-device, .product-device-2 {
+  transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.product-device:hover, .product-device-2:hover {
+  transform: rotate(20deg) scale(-1.1);
+  background: linear-gradient(to right, #22d1ee, #22a7d1);
+}
+
+/* Footer animation */
+footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: #fff; /* Change text color on hover */
+}
+
+/* Button animation */
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: #fff; /* Change text color on hover */
+}
+
+/* Link animation */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff5252; /* Change color on hover */
+}
+
+/* Text paragraph animation */
+p {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+p:hover {
+  color: #ff6b81; /* Change color on hover */
+  transform: scale(1.1); /* Scale text on hover */
+}
+
+/* Image animation */
+img {
+  transition: transform 0.3s ease, filter 0.5s ease; /* Added transitions */
+  transform-origin: center; /* Set the transform origin to the center */
+  filter: brightness(100%); /* Initial brightness */
+}
+
+/* Additional hover effects */
+img:hover{
+  animation: rotateAndBrighten 0.5s ease forwards, scaleUp 0.5s ease forwards; /* Combine animations */
+}
+
+@keyframes rotateAndBrighten {
+  from {
+    transform: rotate(0deg);
+    filter: brightness(100%);
+  }
+  to {
+    transform: rotate(10deg);
+    filter: brightness(80%);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Animation for still elements */
+/* Header animation */
+.site-header {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Button bounce animation */
+.card {
+  animation: bounce 0.9s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+/* Additional animations */
+/* Card rotation animation */
+.card-img-to{
+  animation: rotateCard 2s infinite linear;
+}
+
+@keyframes rotateCard {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Featurette image scale animation */
+.featurette-image {
+  animation: scaleFeaturette 1s infinite alternate;
+}
+
+@keyframes scaleFeaturette {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Product device rotation animation */
+.bd-placeholder-img card-img-top{
+  animation: rotateProductDevice 3s infinite linear;
+}
+
+@keyframes rotateProductDevice {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text paragraph color change animation */
+p {
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  from {
+    color: #ff6b81;
+  }
+  to {
+    color: #ff5252;
+  }
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; /* Adjust max-width for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; /* Adjust max-width for large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; /* Adjust max-width for extra-large screens */
+  }
+}
